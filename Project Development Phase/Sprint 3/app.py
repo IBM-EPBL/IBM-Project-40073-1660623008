@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-model=load_model("numbers.h5")
+model=load_model("model/number.h5")
 
 @app.route('/')
 def home() :
