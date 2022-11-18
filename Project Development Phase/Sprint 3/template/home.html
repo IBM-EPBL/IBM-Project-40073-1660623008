@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Novel Method for Handwritten Digit Recognition System</title>
+</head>
+<script>
+    var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+<style>
+    body{
+    margin: 0px;
+    margin-top: -27px;
+    
+    }
+    .topic{
+    background-color:brown;
+    color:white;
+    font-size: 40px;
+    width:100%
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        background-image: url('img/writting.avif');
+        height: 750px;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: -27px;
+        
+    }
+    .content_1{
+        width: 50%;
+        
+        text-align: center;
+    }
+    
+    .content_3{
+        margin-left: 200px;
+    }
+    .content_4{
+        display: flex;
+    } 
+    .file_input{
+        cursor: pointer;
+        background-color: black;
+        border-radius: 5%;
+        color:white;
+        border: 1px solid black ;
+        padding: 10px;
+    }
+    .file_input:hover{
+        background-color:white ;
+        color:black;
+    }
+
+    .file_show{
+        height: 250px;
+        width: 250px;
+        border: 2px solid black ;
+        background-color:white;
+    }
+    .process{
+        cursor: pointer;
+        background-color: white;
+        border-radius: 5%;
+        color:black;
+        border: 1px solid black ;
+        padding: 10px; 
+        margin-left: 25px; 
+    }
+    .process:hover{
+        background-color:black ;
+        color:white;
+    }
+    .note{
+        width: 500px;
+        font-size:20px;
+        text-shadow:2px 2px 5px brown ;
+        color:white;
+        margin-left: 60px;
+        
+    }
+    .about{
+        text-align: center;
+        font-size:30px;
+        color:rgba(241, 11, 11, 0.699);
+        text-shadow:2px 2px 5px rgba(0, 0, 0, 0.486);
+        
+    }
+</style>
+<body>
+<center><h1 class="topic">A Novel Method for Handwritten Digit Recognition System</h1></center>
+<form action="/getdata" method="post">
+<div class="content">
+    <div class="content_1">
+        <h3 class="about">About</h3>
+        <p class="note">Handwriting recognition is one of the compelling research works going on because every individual in this world has their own style of writing. It is the capability of the computer to identify and understand handwritten digits or characters automatically. Because of the progress in the field of science and technology, everything is being digitalized to reduce human effort. Hence, there comes a need for handwritten digit recognition in many real-time applications. MNIST data set is widely used for this recognition process and it has 70000 handwritten digits. We use Artificial neural networks to train these images and build a deep learning model. Web application is created where the user can upload an image of a handwritten digit. this image is analyzed by the model and the detected result is returned on to UI</p>
+    </div>
+    <div class="content_2">
+        <h1 class="about">Upload a Image of Handwritten Number(0-9) Below...</h1>
+        <div class="content_3">
+        <p><img class="file_show" id="output" width="200" /></p>
+        <p><input style="display: none;"  type="file"  accept="image/*" name="image" id="image"  onchange="loadFile(event)"></p>
+        <div class="content_4">
+        <p><button style="display: none;" type="submit" id="submit"></button></p>
+        <p><label class="file_input" for="image" >Upload Image</label></p>
+        <p><label class="process" for="submit">Process Image</label></p>
+    </div>
+</div> 
+        
+    </div>
+</div>
+</form>
+</body>
+</html>
